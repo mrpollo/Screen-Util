@@ -33,14 +33,3 @@ screenutil.getScrollOffset = function() {
 	}
 	return y;
 };
-$(document).ready(function(){
-	$('#launchCoupon').click(function(e){
-		e.preventDefault();
-		var ec = screenutil.getelementcenter( $('#scrolling_coupon') );
-		$('#scrolling_coupon').css('left', ec.left+'px').show().animate({'top': ec.top+'px'}, 'slow');
-	})
-	$('#scrolling_coupon').click(function(){
-		$(this).hide().css({'left': '0', 'top': '0'});
-	})
-	
-})
